@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav-bar{
+    background-color: #0a0e0a;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: x-large;
+    justify-content: space-between;
+}
+.logo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 77px;
+    margin-left: 20px;
+    width: 25%;
+    margin-top: 15px;
+}
+.search{
+    width: 100%;
+ line-height: 30px;
+}
+.city-search{
+    height: 30px;
+    width: 50%;
+}
+h3{
+    color:#04ff00;
+}
+.btn-ser{
+    margin-left: 0px;
+    height: 30px;
+    width: 20%;
+    background-color: rgb(158 223 30);
+    border: none;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-ser:hover{
+    background-color:rgb(104, 124, 64) ;
+}
+.card{
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-bottom: 20px;
+    background-color :#7a6a6a4a;
+    width: 23%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    
+}
+.card,.description{
+    padding-top: 5px;
+}
+.cross{
+    padding-top: 2px;
+    padding-left: 10px;
+}
+.close{
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    margin:auto;
+    border: 2px solid rgb(95, 80, 80);
+    background-color: rgb(99, 85, 85);
+    color:rgb(207, 194, 194);
+}
+.close:hover{
+    background-color: gray;
+}
+form{
+    width: 50%;
+}
+.notification.is-success {
+    width: 30%;
+    padding: 5px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    margin-left: 500px;
+    margin-top: 20px;
+}
+.notification.is-danger{
+    padding: 5px;
+    text-align: center;
+    width: 30%;
+    background-color: red;
+    color: white;
+    margin-left: 470px;
+    margin-top: 10px;
+}

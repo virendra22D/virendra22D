@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <div class="logo">
+      <h3>City Weather</h3>
+    </div>
+    <form method="post">
+    <div class="search">
+      <input name="city" type="text" placeholder="Search your city. . " class="city-search">
+      <button class="btn-ser">search</button>
+    </div>
+  </form>
+  </nav>
+  <span>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category,message in messages %}
+    {% set message_class = 'is-success' %} 
+
+    {% if category == 'error' %}
+       {% set message_class = 'is-danger' %}
+    {% endif %}
+    <div class="notification {{message_class}} ">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    {% for weather in weather_data %}
+    <div class="card">
+      <figure class="image">
+        <img src="http://openweathermap.org/img/wn/{{weather.icon}}@2x.png" alt="image">
+      </figure>
+      <div class="description">
+        <h4>{{weather.city}}</h4>
+        <br>
+        <h5>{{weather.temprature}} ℃</h5>
+        <br>
+        <p class="desc">{{weather.desc}}</p>
+      </div>
+      <div class="cross">
+      <a href="{{ url_for('delete_city', name = weather.city) }}"><button class="close">x<button></a>
+      </div>
+    </div>
+    {% endfor %}
+  </span>
+</body>
+
+</html>
